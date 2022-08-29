@@ -37,15 +37,15 @@ HOME_DIR = Path.home()
 
 
 # INDEXATOR
-# @app.get("/index", response_class=HTMLResponse)
-# async def indexer(request: Request):
-#     desktop = HOME_DIR/"Desktop"
-#     return TEMPLATES.TemplateResponse("index.html", {"request": request, "home_dir":HOME_DIR,"_list": HOME_DIR.iterdir()})
-#
-# @app.get("/{folder}",)
-# async def list_files(folder:str):
-#     new_path = HOME_DIR/f"{folder}"
-#     return {"List of files - ":new_path.iterdir(),"You wanted a list a ":new_path}
+@app.get("/index", response_class=HTMLResponse)
+async def indexer(request: Request):
+    desktop = HOME_DIR/"Desktop"
+    return TEMPLATES.TemplateResponse("index.html", {"request": request, "home_dir":HOME_DIR,"_list": HOME_DIR.iterdir()})
+
+@app.get("/{folder}",)
+async def list_files(folder:str):
+    new_path = HOME_DIR/f"{folder}"
+    return {"List of files - ":new_path.iterdir(),"You wanted a list a ":new_path}
 
 @app.post("/path")
 async def get_from_directory(path: str):
