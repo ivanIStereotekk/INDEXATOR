@@ -1,0 +1,2 @@
+<a class="list-group-item list-group-item-action" onclick="let myText = this.innerHTML; alert(myText); function sendRequest() {
+  console.log(fetch(url + myText));}; sendRequest(url + myText); let response = await fetch(url + mytext); " id="row_reader">{{ item }}</a>

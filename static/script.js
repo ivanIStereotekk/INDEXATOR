@@ -17,10 +17,16 @@ function getTextFrom(text){
   }
 
   if (xhr.status === 200) {
-    console.log('result', xhr.responseText)
-    document.getElementById("result").innerHTML = "Files in directory :"+ xhr.responseText;
-  } else {
-    console.log('err', xhr.responseText)
+//    console.log('result:     '+ xhr.response);
+    let cleANed = JSON.parse(xhr.response);
+    document.getElementById("result").innerHTML = cleANed["Dataset"];
+    for (let iter in cleANed['Dataset']){
+        let liSter = document.createElement('li');
+        document.body.appendChild(liSter);
+    }
+  }
+  else {
+    console.log('err', xhr.responseText);
     document.getElementById("result").innerHTML = "Empty directory: "+ xhr.responseText;
   }
 }
