@@ -2,7 +2,6 @@
 
 var emPty = '';
 console.log(emPty);
-
 function getTextFrom(text){
     alert(text);
     let secondURLpart = text;
