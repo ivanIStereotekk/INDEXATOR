@@ -37,7 +37,7 @@ async def list_files(folder:str):
 async def get_from_directory(path: str):
     my_path = Path(path)
     try:
-        return {"Dataset": my_path.iterdir()}
+        return {"dataset": my_path.iterdir()}
     except Exception:
         return {"Empty":"Empty list of nothing !"}
 
