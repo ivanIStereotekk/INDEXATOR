@@ -30,9 +30,3 @@ function getTextFrom(text){
   }
 }
 }
-
-//	  console.log(xhr.responseText+ " ------- Result");
-//	  document.getElementById("result").innerHTML = xhr.responseText + "++++";
-//
-//	  }
-//      let resText = JSON.stringify(xhr.responseJSON)
