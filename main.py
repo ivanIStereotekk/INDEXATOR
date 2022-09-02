@@ -11,21 +11,6 @@ from fastapi import FastAPI,Request,Form
 
 app = FastAPI(title="INDEXER APP", openapi_url="/openapi.json")
 
-# from fastapi.middleware.cors import CORSMiddleware
-#
-#
-# origins = [
-#
-#     "*",
-#
-#
-# ]
-#
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=["127.0.0.1:8000/path",'http://localhost:8080','127.0.0.1'],
-#     allow_credentials=False,
-# )
 
 
 #Base path and templates
