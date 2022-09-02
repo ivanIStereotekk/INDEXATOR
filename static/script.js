@@ -19,8 +19,8 @@ function getTextFrom(text){
   if (xhr.status === 200) {
 //    console.log('result:     '+ xhr.response);
     let cleANed = JSON.parse(xhr.response);
-    document.getElementById("result").innerHTML = cleANed["Dataset"];
-    for (let iter in cleANed['Dataset']){
+    document.getElementById("result").innerHTML = cleANed["dataset"];
+    for (let iter in cleANed['dataset']){
         let liSter = document.createElement('li');
         document.body.appendChild(liSter);
     }
